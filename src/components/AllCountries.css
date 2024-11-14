@@ -1,0 +1,82 @@
+/* Country Card Container */
+.country-item-container {
+  border: 2px solid #ddd;  /* Light border around each country item */
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;  /* To position the delete button inside the container */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* White background inside the border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.country-item-container:hover {
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Button Styling (Positioned inside the container) */
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  position: absolute; /* Positioning it inside the country container */
+  top: 15px;  /* Position it near the top */
+  right: 15px; /* Align it to the right corner */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Country Flag, Title, and Population Styling */
+.country-item img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.country-item h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.country-item p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  /* Full width for country containers on smaller screens */
+  .country-item-container {
+    padding: 15px;
+  }
+
+  /* Adjust the delete button position for smaller screens */
+  .delete-button {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;  /* Make the button text smaller on mobile */
+    padding: 8px 14px;
+  }
+
+  /* Make the buttons full-width on mobile */
+  .sort-controls button,
+  .delete-button,
+  .reset-button {
+    width: 100%;
+    padding: 15px 0;
+    margin: 10px 0;
+  }
+}
